@@ -1,0 +1,13 @@
+<div>
+<% if logged_in? %>
+    <div> 
+        <ul>
+            <li><%= link_to 'All Users', '#' %> </li>
+            <li><%= link_to 'All Groups', '#' %> </li>
+            <li> <%= link_to 'All Costs', '#' %> </li>
+            <li> <%= link_to 'Grouped Costs', '#' %> </li>
+            <li> <%= link_to 'Ungrouped Costs', '#' %> </li>
+        </ul>
+    </div>
+<%end%>
+</div>
