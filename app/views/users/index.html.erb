@@ -1,6 +1,6 @@
 <h1> All Users </h1>
 <section>
-  <ul>
-    <%= render @users %>
-  </ul>
+<% @users.each do |user| %>
+    <p><%= user.username %> </p>
+<%end%>
 </section>
