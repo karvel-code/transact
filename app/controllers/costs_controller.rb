@@ -1,4 +1,7 @@
 class CostsController < ApplicationController
+    
+    before_action :authenticate_user!
+
     def index
         @grouped_costs = Cost.all
     end
