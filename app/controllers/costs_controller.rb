@@ -1,9 +1,11 @@
 class CostsController < ApplicationController
     def index
+        @grouped_costs = Cost.all
     end
 
     def new
-        @group_options = Group.all.map{|group_option|[group_option.name, group_option.id]}
+        @group_options = [['Not in any group' ,0 ]]
+        @group_options += Group.all.map{|group_option|[group_option.name, group_option.id]}
         @cost = Cost.new
     end
 

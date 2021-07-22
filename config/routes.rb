@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :users, only: [:create, :index]
   resources :groups
-  resources :costs
+  resources :costs, except: [:show]
   get 'users/index'
+  get 'costs/index'
 end
