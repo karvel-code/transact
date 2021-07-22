@@ -3,15 +3,30 @@ class CostsController < ApplicationController
     end
 
     def new
-        @group_options = Group.all.map{|group_option|[group_option.name]}
+        @group_options = Group.all.map{|group_option|[group_option.name, group_option.id]}
         @cost = Cost.new
     end
 
     def create
+        @cost = current_user.costs.build(cost_params)
+        @group = Group.find_by(id: group_params[:group_id])
+        @cost.groups << @group unless @group.nil?
+
+        if @cost.save
+            flash[:success] = 'Expense has been created successfully!'
+            redirect_to costs_path
+          else
+            flash.now[:error] = @cost.errors.full_messages
+            render :new
+        end
     end
 
     private
     def cost_params
         params.require(:cost).permit(:name, :amount)
-    end 
+    end
+
+    def group_params
+        params.require(:cost).permit(:group_id)
+    end
 end
