@@ -1,0 +1,12 @@
+<%= form_with(model: @cost, local: true) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :amount %>
+    <%= f.text_field :amount, class: 'form-control' %>
+
+    <%= select_tag(:author_id, options_for_select(@group_options)) %>
+
+    <%= f.submit "Add cost" %>
+<% end %>
