@@ -10,7 +10,6 @@
     text-decoration: none;
     color: white;   
     font-weight: 700;
-    
 }
 
 .header{
@@ -21,4 +20,30 @@
     padding: 9px;
     background-color:#3778c2;
     border-radius: 10px;
+}
+
+.welcome-content{
+    margin: auto ;
+    height: 100px;
+}
+
+// h1{
+//     text-align: center;
+// }
+
+.center-items{
+    display: flex;
+    // border: 5px solid black;
+    width: 60%;
+    margin: auto;
+    padding: 60px;
+    // align-items: center;
+    margin-top: 180px;
+    border-radius: 20px;
+    background-color: #3778c2 ;
+}
+
+.welcome-text{
+    color: whitesmoke;
+    font-weight: 800;
 }
