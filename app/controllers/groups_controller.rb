@@ -11,6 +11,7 @@ class GroupsController < ApplicationController
 
     def create
         @group = current_user.groups.build(group_params)
+        @group.image.attach(params[:group][:image])
 
         if @group.save
             flash[:success] = "#{@group.name} Group has been created successfully!"

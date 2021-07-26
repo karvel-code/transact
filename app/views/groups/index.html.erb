@@ -2,6 +2,7 @@
 <section>
 <li><%= link_to 'Create New Group', new_group_path %> </li>
 <% @groups.each do |group| %>
+    <%= image_tag group.image if group.image.attached? %>
     <p><%= group.name %> </p>
 <%end%>
 </section>
