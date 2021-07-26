@@ -63,9 +63,11 @@
 
 .group-container{
     display: flex;
-    border: red solid 1px;
+    margin: auto;
+    border: #5fb523 solid 1px;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 .group-button a{
