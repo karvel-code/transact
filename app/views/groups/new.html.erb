@@ -1,5 +1,9 @@
 <%= form_with(model: @group, local: true) do |f| %>
 
+    <span class="image">
+    <%= f.file_field :image %>
+    </span>
+
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
 
