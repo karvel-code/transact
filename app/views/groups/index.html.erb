@@ -1,8 +1,12 @@
 <h1> All Groups </h1>
 <section>
-<li><%= link_to 'Create New Group', new_group_path %> </li>
+
 <% @groups.each do |group| %>
-    <%= image_tag group.image if group.image.attached? %>
-    <p><%= group.name %> </p>
+    <div class= "group-container my-2">
+        <span class= "group-img mx-3 "> <%= image_tag group.image if group.image.attached? %> </span>
+        <p class = "mx-3">Name: <%= group.name %> </p>
+        <p class = "mx-3">Created: <%= group.created_at %> </p>
+    </div>
 <%end%>
+<li class= "group-button d-flex justify-content-center"><%= link_to 'Create New Group', new_group_path %> </li>
 </section>

@@ -1,9 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// *{
-//     // font-size: 15px;
-// }
+*{
+    font-size: 15px;
+    font-weight: 600;
+}
 
 .header-font a{
     font-size: 15px;
@@ -46,4 +47,33 @@
 .welcome-text{
     color: whitesmoke;
     font-weight: 800;
+}
+
+// .group-img{
+//     width: 200px;
+//     height: 200px;
+// }
+
+.group-img img {
+    display: block;
+    max-width: 100%;
+    height: 100px;
+    width: 150px;
+}
+
+.group-container{
+    display: flex;
+    border: red solid 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-button a{
+    color: white;
+    text-decoration: none;
+    padding: 9px;
+    padding-right: 100px;
+    padding-left: 100px;
+    background-color: #5fb523;
+    // border-radius: 10px;
 }
