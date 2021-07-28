@@ -1,10 +1,13 @@
 <h1> All Groups </h1>
 <section>
+<h1> Total Amount:</h1>
+
+
 
 <% @groups.each do |group| %>
     <div class= "group-container my-2 py-2">
         <span class= "group-img mx-3 "> <%= image_tag group.image if group.image.attached? %> </span>
-        <p class = "mx-3">Name: <%= group.name %> </p>
+         <%= link_to group.name, '#', class: "mx-3 text-decoration-none group-name" %>
         <p class = "mx-3">Created: <%= group.created_at.day %>/<%= group.created_at.month %>/<%= group.created_at.year %> </p>
     </div>
 <%end%>
