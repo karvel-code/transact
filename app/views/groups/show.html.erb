@@ -1,0 +1,8 @@
+<section> 
+    <div>
+        <% @costs.each do |cost| %>
+            <%= cost.name %>
+            <%= cost.author.username %>
+        <% end %>
+    </div>
+</section>

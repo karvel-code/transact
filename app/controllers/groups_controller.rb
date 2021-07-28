@@ -9,6 +9,11 @@ class GroupsController < ApplicationController
         @group = Group.new
     end
 
+    def show
+        @group = Group.find(params[:id])
+        @costs = @group.costs.includes(:author)
+    end
+
     def create
         @group = current_user.groups.build(group_params)
         @group.image.attach(params[:group][:image])
