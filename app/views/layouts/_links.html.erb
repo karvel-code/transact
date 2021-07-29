@@ -1,4 +1,4 @@
-<nav class= "header  d-flex d-lg-flex flex-row px-4 py-4 justify-content-between">
+<nav class= "header  d-flex d-lg-flex flex-row px-4 py-4 justify-content-between align-items-center">
    <input type= "checkbox" id= "check">
    <label for= "check" class="check-btn">
    <i class="fas fa-bars"></i>
@@ -7,10 +7,12 @@
         <% if user_signed_in? %>
            <li class= "px-3 header-font nav-link"> <%= link_to 'Home', root_path %> </li>
            <li class= "px-3 header-font nav-link"> <%= link_to 'All Users', users_path %> </li>
+           <li class= "px-3 header-font nav-link"> <%= link_to 'All Costs', costs_all_costs_path %> </li>
            <li class= "px-3 header-font nav-link"> <%= link_to 'All Groups', groups_path %> </li>
            <li class= "px-3 header-font nav-link"> <%= link_to 'New Cost', new_cost_path %> </li>
            <li class= "px-3 header-font nav-link"> <%= link_to 'Grouped Costs', costs_path %> </li>
            <li class= "px-3 header-font nav-link"> <%= link_to 'My External Costs', costs_external_path %> </li>
+           
       </ul>
       <div class = "d-flex jusify-content-end">
          <div class= "px-3 header-font"> <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-button' %> </div>

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'costs/index'
   get 'costs/external', to: 'costs#external'
+  get 'costs/all_costs', to: 'costs#all_costs'
 end

@@ -3,13 +3,16 @@ class CostsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @all_costs = Cost.all
         @grouped_costs = Cost.internal
         
     end
     
     def external
         @external_costs = Cost.external
+    end
+
+    def all_costs
+        @all_costs = Cost.all
     end
 
     def new
