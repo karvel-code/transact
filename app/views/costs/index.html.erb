@@ -2,5 +2,7 @@
 
 <% @grouped_costs.each do |grouped_cost| %>
     <%= grouped_cost.name %>
+    <%= grouped_cost.groups.to_a.first.name %>
+    <%= grouped_cost.amount %>
 
 <% end %>
