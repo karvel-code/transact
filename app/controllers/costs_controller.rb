@@ -5,6 +5,11 @@ class CostsController < ApplicationController
     def index
         @all_costs = Cost.all
         @grouped_costs = Cost.internal
+        
+    end
+    
+    def external
+        @external_costs = Cost.external
     end
 
     def new
