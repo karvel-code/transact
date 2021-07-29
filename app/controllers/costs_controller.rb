@@ -3,7 +3,8 @@ class CostsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @grouped_costs = Cost.all
+        @all_costs = Cost.all
+        @grouped_costs = Cost.internal
     end
 
     def new

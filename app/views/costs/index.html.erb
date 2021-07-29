@@ -1,3 +1,6 @@
 <h1>Grouped Cost </h1>
 
-       <%= render @grouped_costs %>
+<% @grouped_costs.each do |grouped_cost| %>
+    <%= grouped_cost.name %>
+
+<% end %>
