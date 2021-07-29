@@ -1,91 +1,118 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-*{
-    font-size: 15px;
-    font-weight: 600;
+* {
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.header-font a{
-    font-size: 15px;
-    text-decoration: none;
-    color: white;   
-    font-weight: 700;
+.header-font a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 
-.header{
-    background-color: #434b43 ;
+.header {
+  background-color: #434b43;
 }
 
-.logout-button{
-    padding: 9px;
-    background-color:#3778c2;
-    border-radius: 10px;
+.logout-button {
+  padding: 9px;
+  background-color: #3778c2;
+  border-radius: 10px;
 }
 
-.welcome-content{
-    margin: auto ;
-    height: 100px;
+.check-btn {
+  font-size: 30px;
+  color: white;
+  display: none;
 }
 
-// h1{
-//     text-align: center;
-// }
-
-.center-items{
-    display: flex;
-    // border: 5px solid black;
-    width: 60%;
-    margin: auto;
-    padding: 60px;
-    // align-items: center;
-    margin-top: 180px;
-    border-radius: 20px;
-    background-color: #3778c2 ;
+#check {
+  display: none;
 }
 
-.welcome-text{
-    color: whitesmoke;
-    font-weight: 800;
+.welcome-content {
+  margin: auto;
+  height: 100px;
 }
 
-// .group-img{
-//     width: 200px;
-//     height: 200px;
-// }
+.center-items {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding: 60px;
+  margin-top: 180px;
+  border-radius: 20px;
+  background-color: #3778c2;
+}
+
+.welcome-text {
+  color: whitesmoke;
+  font-weight: 800;
+}
 
 .group-img img {
+  display: block;
+  max-width: 100%;
+  height: 100px;
+  width: 150px;
+}
+
+.group-container {
+  display: flex;
+  margin: auto;
+  border: #5fb523 solid 1px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.group-button a {
+  color: white;
+  text-decoration: none;
+  padding: 9px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: #5fb523;
+}
+
+.group-name {
+  color: black;
+}
+
+.cost-groups {
+  border: #3778c2 solid 1px;
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .check-btn {
     display: block;
-    max-width: 100%;
-    height: 100px;
-    width: 150px;
-}
+  }
 
-.group-container{
-    display: flex;
-    margin: auto;
-    border: #5fb523 solid 1px;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    background-color: #3778c2;
+  }
 
-.group-button a{
-    color: white;
-    text-decoration: none;
-    padding: 9px;
-    padding-right: 100px;
-    padding-left: 100px;
-    background-color: #5fb523;
-    // border-radius: 10px;
-}
+  nav ul li {
+    display: block;
+  }
 
-.group-name{
-    color: black;
-}
+  nav ul li a {
+    color: red;
+  }
 
-.cost-groups{
-    border:#3778c2 solid 1px;
-    width: 80%;
-    margin: auto;
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
