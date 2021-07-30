@@ -1,6 +1,8 @@
 <h1 class="text-center"> All Users </h1>
 <section>
 <% @users.each do |user| %>
-    <p class="text-center"><%= user.username %> </p>
+    <div class= "users-section text-center">
+    <p><%= user.username %> </p>
+    </div>
 <%end%>
 </section>

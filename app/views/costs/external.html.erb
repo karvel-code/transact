@@ -1,5 +1,7 @@
-<h1> External Costs</h1>
+<h1 class="text-center"> External Costs</h1>
 <% @external_costs.each do |external_cost| %>
-    <%= external_cost.name %>
-    <%= external_cost.amount%>
+    <div class="d-flex justify-content-center external-costs-section">
+        <%= external_cost.name %>
+        <%= external_cost.amount%>
+    </div>
 <% end %>

@@ -112,11 +112,19 @@
     left: 0;
   }
 
-  .costs-section {
+  .costs-section,
+  .external-costs-section,
+  .grouped-cost-section, .users-section {
     border: #5fb523 solid 1px;
     width: 80%;
     margin: auto;
     padding: 10px;
     margin-bottom: 3px;
   }
+  // .grouped-cost-section{
+  //   border:#5fb523 solid 1px ;
+  //   width: 80%;
+  //   margin: auto;
+  //   margin-bottom: 3px;
+  // }
 }
