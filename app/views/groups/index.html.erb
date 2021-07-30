@@ -1,9 +1,5 @@
 <h1> All Groups </h1>
 <section>
-<h1> Total Amount:</h1>
-
-
-
 <% @groups.each do |group| %>
     <div class= "group-container my-2 py-2">
         <span class= "group-img mx-3 "> <%= image_tag group.image if group.image.attached? %> </span>

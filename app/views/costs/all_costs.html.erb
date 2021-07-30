@@ -1,5 +1,9 @@
-<h1> All Costs </h1>
+<h1 class="section-title"> All Costs </h1>
+<section class= "">
 <% @all_costs.each do |all_cost| %>
+    <div> 
     <%= all_cost.name %>
-    <%= all_cost.amount%>
+    <%= all_cost.amount%> 
+    </div>
 <% end %>
+</section>

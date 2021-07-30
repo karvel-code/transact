@@ -88,6 +88,16 @@
   margin: auto;
 }
 
+.section-title {
+  text-align: center;
+}
+
+// .all-cost {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
 @media (max-width: 991px) {
   .check-btn {
     display: block;
@@ -106,10 +116,6 @@
 
   nav ul li {
     display: block;
-  }
-
-  nav ul li a {
-    color: red;
   }
 
   #check:checked ~ ul {
