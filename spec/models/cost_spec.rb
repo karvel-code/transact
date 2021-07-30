@@ -22,4 +22,9 @@ RSpec.describe Cost, type: :model do
   it 'should check the correct association between user and expense' do
     user.costs.should include(cost)
   end
+
+  it 'should have zero or many groups' do
+    cost = Cost.reflect_on_association(:groups)
+    expect(cost.macro).to eq(:has_many)
+  end
 end
