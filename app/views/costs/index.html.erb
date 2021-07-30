@@ -1,8 +1,9 @@
 <h1>Grouped Cost </h1>
 
 <% @grouped_costs.each do |grouped_cost| %>
-    <%= grouped_cost.name %>
-    <%= grouped_cost.groups.to_a.first.name %>
-    <%= grouped_cost.amount %>
-
+    <div class= "d-flex">
+        <%= grouped_cost.name %>
+        <%= grouped_cost.groups.to_a.first.name %>
+        <%= grouped_cost.amount %>
+    </div>
 <% end %>
