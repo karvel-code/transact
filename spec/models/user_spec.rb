@@ -1,22 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create(username: 'elvis', email: 'elvis@gmail.com', password: 'elvis123') }
-  let(:invalid_user) { User.create(username: '') }
+  let(:user) { User.new(username: 'elvis', email: 'elvis@gmail.com', password: 'elvis123',  password_confirmation: 'elvis123') }
+  let(:invalid_user) { User.new(username: '') }
 
 
-#   it 'creates user correctly' do
-#     @user = User.create(username: 'elvis', email: 'elvis@gmail.com', password: 'elvis123')
-#     expect(@user.valid?).to be true
-#   end
+  it 'creates user correctly' do
+    @user = User.new(username: 'leon', email: 'leon@gmail.com', password: 'leon123', password_confirmation: 'leon123')
+    expect(@user.valid?).to be true
+  end
 
   it 'user must have email' do
-    @user = User.create(username: 'elvis', password: 'elvis123')
+    @user = User.new(username: 'elvis', password: 'elvis123')
     expect(@user.valid?).to be false
   end
 
   it 'user must have password' do
-    @user = User.create(username: 'elvis', email: 'elvis@gmail.com')
+    @user = User.new(username: 'elvis', email: 'elvis@gmail.com')
     expect(@user.valid?).to be false
   end
 end
