@@ -6,7 +6,7 @@ class Cost < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3, maximum: 25 }
 
   def self.internal
-    Cost.reject { |c| c.groups.empty? }
+    Cost.select { |c| c.groups.any? }
   end
 
   def self.external
