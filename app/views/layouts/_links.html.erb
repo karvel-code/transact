@@ -17,5 +17,7 @@
       <div class = "d-flex jusify-content-end">
          <div class= "px-3 header-font"> <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-button' %> </div>
       </div>
+      <%else %>
+         <div class= "px-3 header-font"> <%= link_to 'Log In', '#' %> </div>
       <%end%>
 </nav>

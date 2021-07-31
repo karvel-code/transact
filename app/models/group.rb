@@ -1,7 +1,7 @@
 class Group < ApplicationRecord
     belongs_to :author, class_name: 'User'
 
-    has_many :cost_groups
+    has_many :cost_groups, dependent: :destroy
   
     has_many :costs, through: :cost_groups, source: :cost
 
