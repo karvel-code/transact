@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.new(username: 'elvis', email: 'elvis@gmail.com', password: 'elvis123',  password_confirmation: 'elvis123') }
+  let(:user) do
+    User.new(username: 'elvis', email: 'elvis@gmail.com', password: 'elvis123', password_confirmation: 'elvis123')
+  end
   let(:invalid_user) { User.new(username: '') }
-
 
   it 'creates user correctly' do
     @user = User.new(username: 'leon', email: 'leon@gmail.com', password: 'leon123', password_confirmation: 'leon123')

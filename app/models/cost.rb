@@ -5,18 +5,17 @@ class Cost < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 3, maximum: 25 }
 
-#   has_many :cost_groups_a, -> { where group_id: 0 }, class_name: 'CostGroup', foreign_key: 'cost_id'
-#   has_many :grouped_costs, through: :
+  #   has_many :cost_groups_a, -> { where group_id: 0 }, class_name: 'CostGroup', foreign_key: 'cost_id'
+  #   has_many :grouped_costs, through: :
 
-# scope :internal, -> { where('group_id > ?', 0 ) }
-# scope :external, -> { where('group_id = ?', nil ) }
+  # scope :internal, -> { where('group_id > ?', 0 ) }
+  # scope :external, -> { where('group_id = ?', nil ) }
 
+  def self.internal
+    Cost.select { |c| !c.groups.empty? }
+  end
 
-def self.internal
-  Cost.select{|c|!c.groups.empty?}
-end
-
-def self.external
-  Cost.select{|c|c.groups.empty?}
-end
+  def self.external
+    Cost.select { |c| c.groups.empty? }
+  end
 end
