@@ -1,24 +1,85 @@
-# README
+# Ruby on Rails Capstone Project: Transact
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- This is the capstone project of the Microverse Ruby on Rails curriculum.
 
-Things you may want to cover:
+- In this project, I created a cost/transaction grouping app where users can create an account with their username and add costs to specific groups or add them as ungrouped costs.
 
-* Ruby version
+- Users can view contributions in each group.
 
-* System dependencies
+  Some of the advanced concepts explored in this project include.
 
-* Configuration
+- Basic Authentication
 
-* Database creation
+- Used RSpec as the test suite.
 
-* Database initialization
+![screenshot](./app/assets/images/project-screenshot.png)
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby,
+- Rails
+- HTML
+- CSS
+- Bootstrap
+- Rspec
 
-* Deployment instructions
+## Live Demo
 
-* ...
+- [Live Demo Link](https://pacific-sierra-20784.herokuapp.com)
+
+### Installation and Setup
+
+- Install and start the project on your local machine with the following steps:
+
+  `git clone https://github.com/karvel-code/transact.git`
+
+  `cd Transact`
+
+  `yarn install`
+
+  `bundle install`
+
+- Setup database with:
+
+  `rails db:create`
+  `rails db:migrate`
+
+### Usage
+
+- Start a rails server in the terminal with:
+
+  `rails s`
+
+- Open `http://localhost:3000` in your browser.
+
+### Run tests
+
+- Run in your terminal the code:
+
+  `rspec --format documentation`
+
+## Author
+
+👤 **Elvis Githinji**
+
+- Github: [@karvel-code](https://github.com/karvel-code)
+- Linkedin: [Elvis Githinji](https://www.linkedin.com/in/elvisgithinji/)
+
+## 🤝 Contributing
+
+- Contributions, issues, and feature requests are welcome!
+
+- Feel free to check the [issues page](https://github.com/karvel-code/transact/issues)
+
+## Show your support
+
+- Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- You can access all the design info (color, typography, layouts) in this link:
+
+- [Design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
+
+- Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
