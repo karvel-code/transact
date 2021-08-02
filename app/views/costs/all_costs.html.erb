@@ -1,9 +1,9 @@
 <h1 class="text-center"> All Costs </h1>
 <section>
-<% @all_costs.each do |all_cost| %>
+<% @user_costs.each do |user_cost| %>
     <div class="text-center costs-section"> 
-    <%= all_cost.name %>
-    <%= all_cost.amount%> 
+    <%= user_cost.name %>
+    <%= user_cost.amount%> 
     </div>
 <% end %>
 </section>

@@ -11,6 +11,7 @@ class CostsController < ApplicationController
 
   def all_costs
     @all_costs = Cost.all
+    @user_costs = current_user.costs
   end
 
   def new
