@@ -4,7 +4,7 @@
     <%= f.text_field :name, class: 'form-control' %>
 
     <%= f.label :amount %>
-    <%= f.text_field :amount, class: 'form-control' %>
+    <%= f.number_field :amount, data: { numeric: true }, class: 'form-control', placeholder: "Enter Amount In Dollars Only Numbers " %>
 
     
     <%= f.select(:group_id, @group_options, {}) %>

@@ -5,6 +5,10 @@ class Cost < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 3, maximum: 25 }
 
+  validates_numericality_of :amount, greater_than: 0, allow_nil: false
+
+  # validates :amount, :numericality => {:only_integer => true}
+
   def self.internal
     Cost.select { |c| c.groups.any? }
   end
