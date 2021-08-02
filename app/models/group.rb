@@ -8,4 +8,6 @@ class Group < ApplicationRecord
   has_one_attached :image
 
   validates :name, presence: true, length: { minimum: 3, maximum: 25 }
+
+  default_scope { order(name: :asc) }
 end

@@ -2,8 +2,9 @@
 <section>
 <% @user_costs.each do |user_cost| %>
     <div class="text-center costs-section"> 
-    <%= user_cost.name %>
-    <%= user_cost.amount%> 
+    <p> Name: <%= user_cost.name %> </p>
+    <p> Amount: <%= user_cost.amount%> </p>
+    <p> Date: <%= user_cost.created_at.day %>/<%= user_cost.created_at.month %>/<%= user_cost.created_at.year %> </p>
     </div>
 <% end %>
 </section>
