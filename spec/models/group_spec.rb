@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-
   let(:user1) { User.create(username: 'elvis', email: 'elvis@gmail.com', password: 'elvis123') }
 
   context 'validation test' do
@@ -19,7 +18,6 @@ RSpec.describe Group, type: :model do
       @group = Group.new(name: 'taxes', author_id: nil)
       expect(@group.valid?).to be false
     end
-  
   end
 
   context 'association test' do
