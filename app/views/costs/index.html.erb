@@ -12,8 +12,10 @@
             </div>
         <%end%>
     <%end %>
-    <% unless total_cost == 0 %>
-        <%= total_cost %>
-    <% end %>
+    <div class= "d-flex justify-content-center grouped-cost-section">
+        <% unless total_cost == 0 %>
+            <p> Total: <%= total_cost %> </p>
+        <% end %>
+    </div>
     
   <% end %>

@@ -8,6 +8,8 @@
         <% total_cost += external_cost.amount %>
     </div>
 <% end %>
+<div class="d-flex justify-content-center external-costs-section">
     <% unless total_cost == 0 %>
-    <%= total_cost %>
+    <p> Total: <%= total_cost %> </p>
     <% end %>
+</div>
