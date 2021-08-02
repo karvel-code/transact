@@ -27,6 +27,10 @@
 
 - [Live Demo Link](https://pacific-sierra-20784.herokuapp.com)
 
+## Video Link
+
+- [Video Link](https://www.loom.com/share/3a15b5c218944e37874a7f07e5aced86)
+
 ### Installation and Setup
 
 - Install and start the project on your local machine with the following steps:
