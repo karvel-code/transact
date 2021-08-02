@@ -1,7 +1,13 @@
 <h1 class="text-center"> External Costs</h1>
+<% total_cost = 0 %>
 <% @external_costs.each do |external_cost| %>
+    
     <div class="d-flex justify-content-center external-costs-section">
         <%= external_cost.name %>
         <%= external_cost.amount%>
+        <% total_cost += external_cost.amount %>
     </div>
 <% end %>
+    <% unless total_cost == 0 %>
+    <%= total_cost %>
+    <% end %>
