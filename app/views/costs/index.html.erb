@@ -1,9 +1,19 @@
 <h1 class="text-center">Grouped Cost </h1>
 
-<% @grouped_costs.each do |grouped_cost| %>
-    <div class= "d-flex justify-content-center grouped-cost-section">
-        <p class="mx-2"><%= grouped_cost.name %> </p>
-        <p class="mx-2"><%= grouped_cost.groups.to_a.first.name %></p>
-        <p><%= grouped_cost.amount %> </p>
-    </div>
-<% end %>
+<% @all_groups.each do |group| %>
+    <% total_cost = 0 %>
+    <% group.costs.each do |cost| %>
+        <% if cost.author_id == current_user.id %>
+            <div class= "d-flex justify-content-center grouped-cost-section">
+                <p class="mx-2"><%= cost.name %> </p>
+                <p class="mx-2"><%= cost.groups.to_a.first.name %></p>
+                <p><%= cost.amount %> </p>
+                <% total_cost += cost.amount %>
+            </div>
+        <%end%>
+    <%end %>
+    <% unless total_cost == 0 %>
+        <%= total_cost %>
+    <% end %>
+    
+  <% end %>

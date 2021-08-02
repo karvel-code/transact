@@ -3,6 +3,7 @@ class CostsController < ApplicationController
 
   def index
     @grouped_costs = Cost.internal
+    @all_groups = Group.all.includes(:costs)
   end
 
   def external
