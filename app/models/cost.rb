@@ -7,7 +7,6 @@ class Cost < ApplicationRecord
 
   validates_numericality_of :amount, greater_than: 0, allow_nil: false
 
-
   def self.internal
     Cost.select { |c| c.groups.any? }
   end
