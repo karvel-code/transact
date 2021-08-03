@@ -1,5 +1,7 @@
 <h1 class="text-center">Grouped Cost </h1>
-<% total_group_cost = 0 %>
+<div class= "d-flex justify-content-center grouped-cost-section">
+<p> Total: <%= @total %> </p>
+</div>
 <% @all_groups.each do |group| %>
     <% total_cost = 0 %>
     <% group.costs.each do |cost| %>
@@ -8,18 +10,7 @@
                 <p class="mx-2"> Name: <%= cost.name %> </p>
                 <p class="mx-2">Group: <%= cost.groups.to_a.first.name %></p>
                 <p> Amount: <%= cost.amount %> </p>
-                <% total_cost += cost.amount %>
-                <% total_group_cost += total_cost %>
             </div>
         <%end%>
     <%end %>
-    <div class= "d-flex justify-content-center grouped-cost-section">
-        <% unless total_cost == 0 %>
-            <p> Total: <%= total_cost %> </p>
-        <% end %>
-    </div>
-    
   <% end %>
-  <div class= "d-flex justify-content-center grouped-cost-section">
-    <p> Total Group Costs: <%= total_group_cost %> </p>
-  </div>

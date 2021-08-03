@@ -7,7 +7,6 @@ class Cost < ApplicationRecord
 
   validates_numericality_of :amount, greater_than: 0, allow_nil: false
 
-  # validates :amount, :numericality => {:only_integer => true}
 
   def self.internal
     Cost.select { |c| c.groups.any? }
@@ -15,5 +14,21 @@ class Cost < ApplicationRecord
 
   def self.external
     Cost.select { |c| c.groups.empty? }
+  end
+
+  def self.external_total
+    sum = 0
+    Cost.external.each do |cost|
+      sum += cost.amount
+    end
+    sum
+  end
+
+  def self.internal_total
+    sum = 0
+    Cost.internal.each do |cost|
+      sum += cost.amount
+    end
+    sum
   end
 end

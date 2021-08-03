@@ -4,10 +4,12 @@ class CostsController < ApplicationController
   def index
     @grouped_costs = Cost.internal
     @all_groups = Group.all.includes(:costs)
+    @total = Cost.internal_total
   end
 
   def external
     @external_costs = Cost.external
+    @total = Cost.external_total
   end
 
   def all_costs
