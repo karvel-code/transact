@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Integration test walkthrough' do
-  background do
+feature 'User authentication' do
+  background 'user fails to sign up' do
     user = User.new(username: 'elvis', password: 'elvis123', email: 'com')
     visit new_user_registration_path
     fill_in 'user_username', with: user.username
@@ -29,6 +29,11 @@ feature 'Integration test walkthrough' do
   scenario 'cannot access costs external path without proper sign up' do
     visit costs_external_path
     expect(page).not_to have_content('External Costs')
+  end
+
+  scenario 'cannot access costs path without proper sign up' do
+    visit costs_path
+    expect(page).not_to have_content('Grouped Cost')
   end
 
   
