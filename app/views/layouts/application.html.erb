@@ -18,7 +18,7 @@
   <body>
     <%= render 'layouts/links' %>
     <%flash.each do |type, message| %>
-      <%= message %>
+     <div class= "bg-danger text-center"> <%= message %> </div>
    <% end %>
     <%= yield %>
   </body>
