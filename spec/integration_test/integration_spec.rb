@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'authentication' do
-  background do
+  background 'user fails to sign up' do
     user = User.new(username: 'elvis', password: 'elvis123', email: 'com')
     visit new_user_registration_path
     fill_in 'user_username', with: user.username
