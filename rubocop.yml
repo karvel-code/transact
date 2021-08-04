@@ -17,8 +17,6 @@ Metrics/MethodLength:
     - "app/controllers/*"
     - "app/models/*"
   Max: 20
-  Exclude:
-    - "**/*_spec.rb"
 Metrics/AbcSize:
   Include:
     - "app/controllers/*"
@@ -27,6 +25,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
   IgnoredMethods: ["describe"]
   Max: 30
 
