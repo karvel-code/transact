@@ -41,5 +41,10 @@ feature 'User authentication' do
     expect(page).not_to have_content('Create Group')
   end
 
+  scenario 'cannot access new cost path without proper sign up' do
+    visit new_cost_path
+    expect(page).not_to have_content('Add Cost')
+  end
+
   
 end
