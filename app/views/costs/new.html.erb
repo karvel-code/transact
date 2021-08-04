@@ -1,0 +1,19 @@
+<%= form_with(model: @cost, local: true) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', required: true %>
+    <% @cost.errors.full_messages_for(:name).each do |message| %>
+        <div class="bg-danger"><%= message %></div>
+    <% end %>
+
+    <%= f.label :amount %>
+    <%= f.number_field :amount, data: { numeric: true }, class: 'form-control', placeholder: "Enter Amount In Dollars Only Numbers ", required: true%>
+    <% @cost.errors.full_messages_for(:amount).each do |message| %>
+        <div class="bg-danger"><%= message %></div>
+      <% end %>
+    
+    <%= f.select(:group_id, @group_options, {}) %>
+
+
+    <%= f.submit "Add cost" %>
+<% end %>

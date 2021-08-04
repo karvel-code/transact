@@ -1,0 +1,9 @@
+<section> 
+        <% @costs.each do |cost| %>
+            <div class= "d-flex justify-content-center cost-groups my-2 p-3 ">
+                <div class= "mx-2 d-flex "> <p>Cost: </p> <%= cost.name %> </div>
+                <div class= "mx-2 d-flex"> <p>Author:</p> <%= cost.author.username %> </div>
+                <div class= "mx-2 d-flex"> <p>Date:</p> <%= cost.author.created_at.to_date %> </div>
+            </div>
+        <% end %>
+</section>

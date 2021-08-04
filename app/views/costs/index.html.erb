@@ -1,0 +1,16 @@
+<h1 class="text-center">Grouped Cost </h1>
+<div class= "d-flex justify-content-center grouped-cost-section">
+<p> Total Amount: <%= @total %> </p>
+</div>
+<% @all_groups.each do |group| %>
+    <% total_cost = 0 %>
+    <% group.costs.each do |cost| %>
+        <% if cost.author_id == current_user.id %>
+            <div class= "d-flex justify-content-center grouped-cost-section">
+                <p class="mx-2"> Name: <%= cost.name %> </p>
+                <p class="mx-2">Group: <%= cost.groups.to_a.first.name %></p>
+                <p> Amount: <%= cost.amount %> </p>
+            </div>
+        <%end%>
+    <%end %>
+  <% end %>

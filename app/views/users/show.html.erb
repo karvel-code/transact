@@ -1,0 +1,8 @@
+<h1 class="text-center"><%= current_user.username %> </h1>
+<section class= "d-flex flex-column align-items-center">
+ <%= link_to 'All Costs', costs_all_costs_path, class: "text-decoration-none profile-section text-dark" %> 
+ <%= link_to 'All Groups', groups_path, class: "text-decoration-none profile-section text-dark" %>
+ <%= link_to 'New Cost', new_cost_path, class: "text-decoration-none profile-section text-dark" %>
+ <%= link_to 'Grouped Costs', costs_path, class: "text-decoration-none profile-section text-dark" %>
+<%= link_to 'My External Costs', costs_external_path, class: "text-decoration-none profile-section text-dark" %>
+</section>

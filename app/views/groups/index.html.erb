@@ -1,0 +1,11 @@
+<h1 class="text-center"> All Groups </h1>
+<section>
+<% @groups.each do |group| %>
+    <div class= "group-container my-2 py-2">
+        <span class= "group-img mx-3 "> <%= image_tag group.image if group.image.attached? %> </span>
+         <%= link_to group.name, group, class: "mx-3 text-decoration-none group-name" %>
+        <p class = "mx-3">Created: <%= group.created_at.day %>/<%= group.created_at.month %>/<%= group.created_at.year %> </p>
+    </div>
+<%end%>
+<li class= "group-button d-flex justify-content-center"><%= link_to 'Create New Group', new_group_path %> </li>
+</section>

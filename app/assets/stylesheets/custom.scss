@@ -1,0 +1,126 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.header-font a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.header {
+  background-color: #434b43;
+}
+
+.logout-button {
+  padding: 9px;
+  background-color: #3778c2;
+  border-radius: 10px;
+}
+
+.check-btn {
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.welcome-content {
+  margin: auto;
+  height: 100px;
+}
+
+.center-items {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding: 60px;
+  margin-top: 180px;
+  border-radius: 20px;
+  background-color: #3778c2;
+}
+
+.welcome-text {
+  color: whitesmoke;
+  font-weight: 800;
+}
+
+.group-img img {
+  display: block;
+  max-width: 100%;
+  height: 100px;
+  width: 150px;
+}
+
+.group-container {
+  display: flex;
+  margin: auto;
+  border: #5fb523 solid 1px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.group-button a {
+  color: white;
+  text-decoration: none;
+  padding: 9px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: #5fb523;
+}
+
+.group-name {
+  color: black;
+}
+
+.cost-groups {
+  border: #3778c2 solid 1px;
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .check-btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    background-color: #3778c2;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .costs-section,
+  .external-costs-section,
+  .grouped-cost-section,
+  .users-section,
+  .profile-section {
+    border: #5fb523 solid 1px;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 3px;
+  }
+}
