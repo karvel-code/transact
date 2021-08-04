@@ -16,9 +16,19 @@ feature 'Integration test walkthrough' do
     expect(page).to have_content('Log in')
   end
 
-  scenario 'cannot access groups path' do
+  scenario 'cannot access groups path without proper sign up' do
     visit groups_path
     expect(page).not_to have_content('All Groups')
+  end
+
+  scenario 'cannot access groups path without proper sign up' do
+    visit groups_path
+    expect(page).not_to have_content('All Groups')
+  end
+
+  scenario 'cannot access costs external path without proper sign up' do
+    visit costs_external_path
+    expect(page).not_to have_content('External Costs')
   end
 
   
