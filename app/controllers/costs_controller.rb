@@ -33,6 +33,8 @@ class CostsController < ApplicationController
       redirect_to costs_path
     else
       flash.now[:error] = @cost.errors.full_messages
+      @group_options = [['Not in any group', 0]]
+      @group_options += Group.all.map { |group_option| [group_option.name, group_option.id] }
       render :new
     end
   end

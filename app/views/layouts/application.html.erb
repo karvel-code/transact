@@ -17,6 +17,9 @@
 
   <body>
     <%= render 'layouts/links' %>
+    <%flash.each do |type, message| %>
+      <%= message %>
+   <% end %>
     <%= yield %>
   </body>
 </html>
