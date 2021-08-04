@@ -7,7 +7,6 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
-    - "spec/"
 
   DisplayCopNames: true
 
@@ -18,6 +17,8 @@ Metrics/MethodLength:
     - "app/controllers/*"
     - "app/models/*"
   Max: 20
+  Exclude:
+    - "**/*_spec.rb"
 Metrics/AbcSize:
   Include:
     - "app/controllers/*"
