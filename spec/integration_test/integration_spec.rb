@@ -45,6 +45,4 @@ feature 'User authentication' do
     visit new_cost_path
     expect(page).not_to have_content('Add Cost')
   end
-
-  
 end
